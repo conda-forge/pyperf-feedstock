@@ -1,5 +1,5 @@
 {% set name = "pyperf" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0d214aa65e085d3e4108a36152cb12f7cd0f4e7fda93b5134b43a9687c975786
+  sha256: c37690e810116a83a244dfeec47885e2f0475b4c450313904be3bc2cdaf6d50a
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyperf = pyperf.__main__:main
 
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'Toolkit to run Python benchmarks'
+  summary: Toolkit to run Python benchmarks
   doc_url: http://pyperf.readthedocs.io/
   dev_url: https://github.com/vstinner/pyperf/
 
