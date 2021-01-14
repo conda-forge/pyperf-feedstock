@@ -1,5 +1,5 @@
 {% set name = "pyperf" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2189fbc4af08d519f85468e70e32c902eab0f1341b2c41028b94b2832d3169a7
+  sha256: 1257d673d89fdcdbaec8077afeb365e7a94739c1b263572b09403cac25708ad3
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyperf = pyperf.__main__:main
