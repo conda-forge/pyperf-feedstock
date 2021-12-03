@@ -10,12 +10,15 @@ source:
   sha256: 8a85dd42e067131d5b26b71472336da7f7f4b87ff9c97350d89f5ff0de9adedc
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyperf = pyperf.__main__:main
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
