@@ -1,11 +1,11 @@
-About pyperf
-============
+About pyperf-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyperf-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/vstinner/pyperf/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyperf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Toolkit to run Python benchmarks
 
