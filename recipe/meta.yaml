@@ -10,7 +10,7 @@ source:
   sha256: 171aea69b8efde61210e512166d8764e7765a9c7678b768052174b01f349f247
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyperf = pyperf.__main__:main
