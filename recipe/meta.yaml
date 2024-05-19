@@ -1,5 +1,5 @@
 {% set name = "pyperf" %}
-{% set version = "2.6.2" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64d8fadce6a74f478f29832c1eaa2a04856655ebff17292d5237fc8317c3a3c5
+  sha256: 4201c6601032f374e9c900c6d2544a2f5891abedc1a96eec0e7b2338a6247589
 
 build:
   number: 0
