@@ -24,7 +24,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools>=61
+    - setuptools >=61
   run:
     - python >=${{ python_min }}
     - psutil >=5.9.0
@@ -51,4 +51,3 @@ extra:
   recipe-maintainers:
     - langmm
     - xhochy
-
