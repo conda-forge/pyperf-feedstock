@@ -1,0 +1,53 @@
+schema_version: 1
+
+context:
+  name: pyperf
+  version: "2.10.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: dd93ccfda79214725293e95f1fa6e00cb4a64adcf1326039486d4e1f91caaa62
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - pyperf = pyperf.__main__:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=61
+  run:
+    - python >=${{ python_min }}
+    - psutil >=5.9.0
+
+tests:
+  - python:
+      python_version:
+        - '*'
+        - ${{ python_min }}.*
+      imports:
+        - pyperf
+  - script:
+      - pyperf --help
+
+about:
+  license: MIT
+  license_file: COPYING
+  summary: Toolkit to run Python benchmarks
+  homepage: http://github.com/psf/pyperf/
+  repository: https://github.com/psf/pyperf/
+  documentation: http://pyperf.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - langmm
+    - xhochy
